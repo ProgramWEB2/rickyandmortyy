@@ -1,0 +1,134 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f4f8; /* Color de fondo suave para toda la página */
+    color: #333333; /* Color de texto principal */
+}
+
+/* Estilos para el header */
+header {
+    background-color: #29b647; /* Color de fondo oscuro */
+    color: #ecf0f1; /* Color de texto claro */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 15px;
+    font-size: 2.5em;
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #399e2b; /* Color de fondo oscuro */
+    color: #ecf0f1; /* Color de texto claro */
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0.5em;
+}
+
+.character-card button:hover {
+    background-color: #31f53b;
+    color: #fff;
+}
+
+.back-button {
+    background-color: #f4f4f4;
+    color: #31f53b;
+    border: 2px solid #31f53b;
+    margin-top: 10px;
+}
+
+.back-button:hover {
+    background-color: #31f53b;
+    color: #fff;
+}
+
+.character-card {
+    border: 5px solid #caee67; /* Color del borde */
+    border-radius: 12px; /* Bordes redondeados más pronunciados */
+    padding: 15px; /* Espaciado interno aumentado */
+    background-color: #4CAF50; /* Color de fondo de las cartas */
+    color: white; /* Color del texto en las cartas */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+    max-width: 100%; /* Asegura que la tarjeta no exceda el ancho del contenedor */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para las cartas */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición para interacción */
+    flex: 1; /* Permite que las tarjetas se expandan igualmente */
+    min-width: 0; /* Asegura que las tarjetas se adapten correctamente en el contenedor */
+}
+
+.character-card:hover {
+    transform: scale(1.05); /* Efecto de aumento al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(15, 15, 15, 0.3); /* Sombra más pronunciada al pasar el ratón */
+}
+
+.character-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.character-card h2 {
+    font-size: 1.8em;
+    margin: 0.5em 0; /* Margen ajustado */
+}
+
+.character-card p {
+    font-size: 1.2em;
+    margin: 0.5em 0; /* Margen ajustado */
+}
+
+.character-card button {
+    background-color: #caee67; /* Color del botón */
+    border: none;
+    border-radius: 5px; /* Bordes redondeados del botón */
+    color: #333; /* Color del texto del botón */
+    padding: 10px 20px; /* Espaciado interno del botón */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Transición para el color del botón */
+}
+
+.character-card button:hover {
+    background-color: #a0c600; /* Color del botón al pasar el ratón */
+    color: #fff; /* Color del texto del botón al pasar el ratón */
+}
+
+.characters-container {
+    color: rgb(19, 22, 12);
+    display: grid ;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px; /* Espacio entre las cartas */
+    padding: 20px;
+    box-sizing: border-box; /* Incluye padding y border en el tamaño total del contenedor */
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    max-width: 1200px; /* Opcional: Establece un ancho máximo para mejorar el diseño en pantallas grandes */
+    margin: 0 auto; /* Opcional: Centra el contenedor horizontalmente */
+}
+
+/* Media queries para adaptarse a pantallas más pequeñas */
+@media (max-width: 1000px) {
+    .characters-container {
+        grid-template-columns: repeat(3, 1fr); /* Muestra 3 columnas por fila en pantallas medianas */
+    }
+}
+
+@media (max-width: 800px) {
+    .characters-container {
+        grid-template-columns: repeat(2, 1fr); /* Muestra 2 columnas por fila en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 500px) {
+    .characters-container {
+        grid-template-columns: repeat(2, 1fr); /* Asegúrate de mostrar 2 columnas en pantallas muy pequeñas */
+    }
+}
