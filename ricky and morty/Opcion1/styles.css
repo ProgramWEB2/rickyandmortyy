@@ -1,0 +1,111 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8f3; /* Color de fondo suave */
+    color: #333333; /* Color de texto principal */
+}
+
+/* Estilos para el header */
+header {
+    background-color: #29b647; /* Color de fondo oscuro */
+    color: #c9d1c9; /* Color de texto claro */
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 15px;
+    font-size: 2.5em;
+}
+
+/* Contenedor de cards */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px; /* Limita el ancho máximo */
+    margin: 0 auto; /* Centra el contenedor */
+}
+
+/* Estilos para cada card */
+.card {
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animación suave */
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.card h3 {
+    margin: 15px 0;
+}
+
+.card p {
+    padding: 0 15px 20px;
+    font-size: 14px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+    box-shadow: 0 8px 16px rgba(15, 15, 15, 0.3); /* Sombra más pronunciada */
+}
+
+/* Estilos para el footer */
+.footer {
+    background-color: #399e2b; /* Color de fondo oscuro */
+    color: #ecf0f1; /* Color de texto claro */
+    padding: 15px;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0.5em;
+}
+
+/* Media queries para dispositivos móviles */
+@media (max-width: 1000px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr); /* 3 columnas en pantallas medianas */
+    }
+}
+
+@media (max-width: 800px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 500px) {
+    .card-container {
+        grid-template-columns: repeat(1, 1fr); /* 1 columna en pantallas muy pequeñas */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
